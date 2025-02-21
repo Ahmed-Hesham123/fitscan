@@ -1,0 +1,183 @@
+/* <table data-start="155" data-end="699"><thead data-start="155" data-end="202"><tr data-start="155" data-end="202"><th data-start="155" data-end="176">Element</th><th data-start="176" data-end="190">Color Code</th><th data-start="190" data-end="202">Use Case</th></tr></thead><tbody data-start="250" data-end="699"><tr data-start="250" data-end="330"><td><strong data-start="252" data-end="269">Primary Color</strong></td><td><code data-start="273" data-end="282">#0dc8db</code></td><td>الأزرار الرئيسية، الروابط، العناصر البارزة</td></tr><tr data-start="331" data-end="405"><td><strong data-start="333" data-end="352">Secondary Color</strong></td><td><code data-start="355" data-end="364">#a4eb40</code></td><td>التحديدات، التمييز، الأزرار الثانوية</td></tr><tr data-start="406" data-end="480"><td><strong data-start="408" data-end="422">Dark Shade</strong></td><td><code data-start="429" data-end="438">#087a85</code></td><td>الهوفر على العناصر، الخلفيات الداكنة</td></tr><tr data-start="481" data-end="556"><td><strong data-start="483" data-end="498">Light Shade</strong></td><td><code data-start="504" data-end="513">#d6f7fa</code></td><td>الخلفيات الفاتحة، البطاقات، التباينات</td></tr><tr data-start="557" data-end="628"><td><strong data-start="559" data-end="575">Neutral Dark</strong></td><td><code data-start="580" data-end="589">#2b2b2b</code></td><td>النصوص الداكنة، العناوين الرئيسية</td></tr><tr data-start="629" data-end="699"><td><strong data-start="631" data-end="648">Neutral Light</strong></td><td><code data-start="652" data-end="661">#f5f5f5</code></td><td>الخلفيات العامة، الأزرار الفاتحة</td></tr></tbody></table> */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::selection{
+  background: #0dc8db;
+  color: #fff;
+}
+html {
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+body {
+  font-family: Rubik, sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+  background-color: #f5f5f5;
+}
+.container {
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+.grid {
+  display: grid;
+  column-gap: 6.4rem;
+  row-gap: 9.6rem;
+}
+.grid:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+.grid--center-v {
+  align-items: center;
+}
+.heading-primary,
+.heading-secondary,
+.heading-tertiary {
+  font-weight: 700;
+  color: #2b2b2b;
+  letter-spacing: -0.5px;
+}
+.subheading,
+strong {
+  font-weight: 500;
+}
+.heading-primary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+.heading-secondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+.heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+.subheading {
+  display: block;
+  font-size: 1.6rem;
+  color: #a4eb40;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+.btn,
+.btn:link,
+.btn:visited,
+.link:link,
+.link:visited {
+  display: inline-block;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.btn,
+.btn:link,
+.btn:visited {
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 1.6rem 3.2rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+.list,
+.list-item {
+  display: flex;
+  gap: 1.6rem;
+}
+.btn--full:link,
+.btn--full:visited {
+  background-color: #0dc8db;
+  color: #fff;
+}
+.btn--full:active,
+.btn--full:hover {
+  background-color: #087a85;
+}
+.btn--outline:link,
+.btn--outline:visited {
+  background-color: #fff;
+  color: #555;
+}
+.btn--outline:active,
+.btn--outline:hover {
+  background-color: #d6f7fa;
+  box-shadow: inset 0 0 0 3px #fff;
+}
+.btn--form {
+  background-color: #a4eb40;
+  color: #fff;
+  align-self: flex-end;
+  padding: 1.2rem;
+}
+.btn--form:hover {
+  background-color: #fff;
+  color: #087a85;
+}
+.link:link,
+.link:visited {
+  color: #0dc8db;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+}
+.link:active,
+.link:hover {
+  color: #087a85;
+  border-bottom: 1px solid transparent;
+}
+.list {
+  list-style: none;
+  flex-direction: column;
+}
+.list-item {
+  font-size: 1.8rem;
+  align-items: center;
+  line-height: 1.2;
+}
+.list-icon {
+  width: 3rem;
+  height: 3rem;
+  color: #a4eb40;
+}
+:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.8rem #a4eb40;
+}
+.margin-right-sm {
+  margin-right: 1.6rem !important;
+}
+.margin-bottom-md {
+  margin-bottom: 4.8rem !important;
+}
+.center-text {
+  text-align: center;
+}
+
+@keyframes up-and-down {
+  0%,
+  100% {
+    top: 0;
+  }
+  50% {
+    top: -50px;
+  }
+}

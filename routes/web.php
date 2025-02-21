@@ -14,5 +14,20 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 });
+
+// Auth
+Route::get('/signup', function () {
+    return view('auth.signup'); 
+})->name('signup'); 
+
+// Pages
+Route::get('/bodymetrics', function () {
+    return view('pages.bodymetrics'); 
+})->name('bodymetrics'); 
+
+Route::get('/dashboard', function () {
+    return view('pages.dashboard'); 
+})->name('dashboard'); 
+

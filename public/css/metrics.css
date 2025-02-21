@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #d6f7fa;
+    color: white;
+    color: #000;
+    text-align: center;
+}
+.container {
+    width: 90%;
+    max-width: 400px;
+}
+.step {
+    display: none;
+    animation: fadeIn 0.5s ease-in-out;
+}
+.active {
+    display: block;
+}
+h2 {
+    margin-bottom: 20px;
+}
+.option {
+    border: 2px solid gray;
+    padding: 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.option:hover,
+.option.selected {
+    border-color: #0dc8db;
+    background: #087a85;
+    color: #fff;
+}
+.btn {
+    width: 100%;
+    padding: 15px;
+    background: #0dc8db;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #087a85;
+}
+
+.btn-back {
+    background: #087a85;
+    margin-top: 10px;
+}
+
+.btn-back:hover {
+    background-color: #0dc8db;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: none;
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
